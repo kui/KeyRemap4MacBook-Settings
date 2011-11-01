@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>kui Settings</name>
+    <list>
+      <item>
+        <name>C-q - Pass Through Mode</name>
+        <identifier>passthrough.kuisettings</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::Q, VK_CONTROL,
+          KeyCode::VK_CONFIG_TOGGLE_notsave_passthrough
+        </autogen>
+      </item>
+      <item>
+        <name>C-d - Forward Delete</name>
+        <identifier>option.kui_controlD</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::D, VK_CONTROL,
+          KeyCode::FORWARD_DELETE
+        </autogen>
+      </item>
+      <item>
+        <name>C-d - Delete</name>
+        <identifier>option.kui_controlH</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::H, VK_CONTROL, KeyCode::DELETE</autogen>
+      </item>
+      <item>
+        <name>C-i - Tab</name>
+        <identifier>option.kui_controlI</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::I, VK_CONTROL, KeyCode::TAB</autogen>
+      </item>
+      <item>
+        <name>C-[ - Escape</name>
+        <identifier>option.kui_controlLeftbracket</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::ESCAPE</autogen>
+      </item>
+      <item>
+        <name>C-m - Return</name>
+        <identifier>option.kui_controlM</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::M, VK_CONTROL, KeyCode::RETURN</autogen>
+      </item>
+      <item>
+        <name>C-pnbf - Up/Down/Left/Right</name>
+        <identifier>option.kui_controlPNBF</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::P, VK_CONTROL, KeyCode::CURSOR_UP</autogen>
+        <autogen>--KeyToKey-- KeyCode::N, VK_CONTROL, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>--KeyToKey-- KeyCode::B, VK_CONTROL, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>--KeyToKey-- KeyCode::F, VK_CONTROL, KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+      <item>
+        <name>C-v - PageDown</name>
+        <identifier>option.kui_controlV</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::V, VK_CONTROL, KeyCode::PAGEDOWN</autogen>
+      </item>
+      <item>
+        <name>M-v - PageUp</name>
+        <identifier>option.kui_commandV</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>--KeyToKey-- KeyCode::V, VK_COMMAND, KeyCode::PAGEUP</autogen>
+      </item>
+      <item>
+        <name>C-y - Command+V</name>
+        <identifier>option.kui_controlY</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::Y, VK_CONTROL,
+          KeyCode::V, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>C-ae - Command+Left/Right</name>
+        <identifier>option.kui_controlAE</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::A, VK_CONTROL,
+          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+          --KeyToKey--
+          KeyCode::E,
+          VK_CONTROL,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>C-k - Command+Shift+Right,Command+X</name>
+        <identifier>option.kui_controlK</identifier>
+        <block>
+          <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE,
+            DICTIONARY</not>
+          <autogen>
+            --KeyToKey--
+            KeyCode::K, VK_CONTROL | ModifierFlag::NONE,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+            KeyCode::X, ModifierFlag::COMMAND_L
+          </autogen>
+        </block>
+        <block>
+          <only>DICTIONARY</only>
+          <autogen>
+            --KeyToKey--
+            KeyCode::K, VK_CONTROL | ModifierFlag::NONE,
+            KeyCode::E, VK_CONTROL | ModifierFlag::SHIFT_L,
+            KeyCode::X, ModifierFlag::COMMAND_L
+          </autogen>
+        </block>
+      </item>
+      <item>
+        <name>C-w to Command+X</name>
+        <identifier>option.kui_controlW</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::W, VK_CONTROL,
+          KeyCode::X, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>M-w to Command+C</name>
+        <identifier>option.kui_commandWCopy</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::W, VK_COMMAND,
+          KeyCode::C, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>M-bf to Option+Left/Right</name>
+        <identifier>option.kui_commandBF</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::B, VK_COMMAND,
+          KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+          --KeyToKey--
+          KeyCode::F, VK_COMMAND,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+        </autogen>
+      </item>
+      <item>
+        <name>M-d - Option+Forward Delete</name>
+        <identifier>option.kui_commandD</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::D, VK_COMMAND,
+          KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
+        </autogen>
+      </item>
+      <item>
+        <name>C-/ to Command+Z</name>
+        <identifier>option.kui_controlSlash</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::SLASH, VK_CONTROL,
+          KeyCode::Z, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>C-x - prefix key</name>
+        <list>
+          <item>
+            <name>Control+X detail</name>
+            <appendix>C-x C-s to Command_L+S</appendix>
+            <appendix>C-x C-f to Command_L+O</appendix>
+            <appendix>C-x k to Command_L+W</appendix>
+            <appendix>C-x C-c to Command_L+Q</appendix>
+            <appendix>C-x C-g to turn off Control+X Mode</appendix>
+            <identifier vk_config="true">notsave.kui_controlX_core</identifier>
+            <autogen>--ShowStatusMessage-- C-x Mode</autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::S, VK_CONTROL | ModifierFlag::NONE, 
+              KeyCode::S, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlX_core
+            </autogen>
+            <autogen>
+              --KeyToKey-- 
+              KeyCode::C, VK_CONTROL | ModifierFlag::NONE, 
+              KeyCode::Q, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlX_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::F, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::O, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlX_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::K, ModifierFlag::NONE,
+              KeyCode::W, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlX_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::G, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlX_core
+            </autogen>
+          </item>
+          <item>
+            <name>Enable C-x</name>
+            <identifier>option.kui_controlX</identifier>
+            <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+            <autogen>
+              --KeyToKey--
+              KeyCode::X, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::VK_CONFIG_FORCE_ON_notsave_kui_controlX_core
+            </autogen>
+          </item>
+        </list>
+      </item>
+      <item>
+        <name>C-&lt;space&gt; - MarkSet</name>
+        <list>
+          <item>
+            <!-- MarkSet Mode Core -->
+            <name>MarkSet Mode detail</name>
+            <appendix>Control+W to Command_L+X</appendix>
+            <appendix>Option+W to Command_L+C</appendix>
+            <appendix>Control+G to turn off MarkSet</appendix>
+            <appendix>Control+Space to turn off MarkSet</appendix>
+            <identifier vk_config="true">notsave.kui_controlSpace_core</identifier>
+            <autogen>--ShowStatusMessage-- MarkSet</autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::W, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_LOCK_SHIFT_L_FORCE_OFF,
+              KeyCode::X, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlSpace_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::W, VK_OPTION  | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_LOCK_SHIFT_L_FORCE_OFF,
+              KeyCode::C, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlSpace_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::G, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_LOCK_SHIFT_L_FORCE_OFF,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlSpace_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::SPACE, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_LOCK_SHIFT_L_FORCE_OFF,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlSpace_core
+            </autogen>
+          </item>
+          <item>
+            <name>Enable C-&lt;space&gt;</name>
+            <identifier>option.kui_controlSpace</identifier>
+            <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+            <autogen>
+              --KeyToKey--
+              KeyCode::SPACE, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::VK_LOCK_SHIFT_L_FORCE_ON,
+              KeyCode::VK_CONFIG_FORCE_ON_notsave_kui_controlSpace_core
+            </autogen>
+          </item>
+        </list>
+      </item>
+      <item>
+        <name>C-s - Command+F</name>
+        <identifier>option.kui_controlS</identifier>
+        <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+        <autogen>
+          --KeyToKey--
+          KeyCode::S, VK_CONTROL,
+          KeyCode::F, ModifierFlag::COMMAND_L
+        </autogen>        
+      </item>
+      <item>
+        <name>C-sr - Search Mode</name>
+        <list>
+          <item>
+            <!-- MarkSet Mode Core -->
+            <name>Search Mode detail</name>
+            <appendix>C-s to Command_L+G</appendix>
+            <appendix>C-r to Command_L+Shift_L+G</appendix>
+            <appendix>C-g to turn off search mode</appendix>
+            <appendix>C-[ to turn off search mode</appendix>
+            <appendix>Esc to turn off search mode</appendix>
+            <identifier vk_config="true">notsave.kui_controlS_core</identifier>
+            <autogen>--ShowStatusMessage-- Search</autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::S, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::G, ModifierFlag::COMMAND_L
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::R, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::G, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlS_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::BRACKET_LEFT, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlS_core
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::ESCAPE, ModifierFlag::NONE,
+              KeyCode::VK_CONFIG_FORCE_OFF_notsave_kui_controlS_core
+            </autogen>
+          </item>
+          <item>
+            <name>Enable C-s</name>
+            <identifier>option.kui_searchMode_controlS</identifier>
+            <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+            <autogen>
+              --KeyToKey--
+              KeyCode::S, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::F, ModifierFlag::COMMAND_L,
+              KeyCode::VK_CONFIG_FORCE_ON_notsave_kui_controlS_core
+            </autogen>
+          </item>
+          <item>
+            <name>Enable C-r</name>
+            <identifier>option.kui_searchMode_controlR</identifier>
+            <not>EMACS, TERMINAL, VIRTUALMACHINE, REMOTEDESKTOPCONNECTION, X11, ECLIPSE</not>
+            <autogen>
+              --KeyToKey--
+              KeyCode::R, VK_CONTROL | ModifierFlag::NONE,
+              KeyCode::F, ModifierFlag::COMMAND_L,
+              KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+              KeyCode::VK_CONFIG_FORCE_ON_notsave_kui_controlS_core
+            </autogen>
+          </item>
+        </list>
+      </item>
+
+      <item>
+        <name>Terminal Apps</name>
+        <list>
+          <item>
+            <name>Swap Command_L and Option_L</name>
+            <appendix>(Pass-Through Tab and Backquote)</appendix>
+            <identifier>remap.app_term_kui_swap_cmd_opt</identifier>
+            <only>TERMINAL</only>
+            <autogen>
+              --KeyToKey--
+              KeyCode::TAB, ModifierFlag::OPTION_L,
+              KeyCode::TAB, ModifierFlag::COMMAND_L
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::BACKQUOTE, ModifierFlag::OPTION_L,
+              KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::COMMAND_L,
+              KeyCode::OPTION_L
+            </autogen>
+            <autogen>
+              --KeyToKey--
+              KeyCode::OPTION_L,
+              KeyCode::COMMAND_L
+            </autogen>
+          </item>
+        </list>
+      </item>
+
+      <item>
+        <name>VM Apps</name>
+        <list></list>
+      </item>
+
+      <item>
+        <name>Web Browser Apps</name>
+        <list>
+          <item>
+            <name>C-l - Command+L</name>
+            <identifier>remap.app_browser_kui_controlL</identifier>
+            <only>SAFARI, FIREFOX, GOOGLE_CHROME</only>
+            <autogen>
+              --KeyToKey--
+              KeyCode::L, VK_CONTROL,
+              KeyCode::L, ModifierFlag::COMMAND_L
+            </autogen>
+          </item>
+          <item>
+            <name>C-t - Command+T</name>
+            <identifier>remap.app_browser_kui_controlT</identifier>
+            <only>SAFARI, FIREFOX, GOOGLE_CHROME</only>
+            <autogen>
+              --KeyToKey--
+              KeyCode::T, VK_CONTROL,
+              KeyCode::T, ModifierFlag::COMMAND_L
+            </autogen>
+          </item>
+        </list>
+      </item>
+
+    </list>
+
+  </item>
+</root>
